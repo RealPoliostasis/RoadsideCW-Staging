@@ -1,0 +1,117 @@
+"items_game"
+{
+//     ____  ____  ___    ____  _____ ________  ______   ________  _________________  __  ___   _       ___________    ____  ____  _   _______
+//    / __ \/ __ \/   |  / __ \/ ___//  _/ __ \/ ____/  / ____/ / / / ___/_  __/ __ \/  |/  /  | |     / / ____/   |  / __ \/ __ \/ | / / ___/
+//   / /_/ / / / / /| | / / / /\__ \ / // / / / __/    / /   / / / /\__ \ / / / / / / /|_/ /   | | /| / / __/ / /| | / /_/ / / / /  |/ /\__ \ 
+//  / _, _/ /_/ / ___ |/ /_/ /___/ // // /_/ / /___   / /___/ /_/ /___/ // / / /_/ / /  / /    | |/ |/ / /___/ ___ |/ ____/ /_/ / /|  /___/ / 
+// /_/ |_|\____/_/  |_/_____//____/___/_____/_____/   \____/\____//____//_/  \____/_/  /_/     |__/|__/_____/_/  |_/_/    \____/_/ |_//____/  
+//
+// DISCLAIMER: I stole all the weapons!!! MUAHAHAHAHA!!!
+//
+// SIDE-NOTE: But seriously thanks for like every single custom weapons pack in existence for helping make this pack a reality. Some are custom made by Poliostasis, like the Dragonslayer weapon. But almost every weapon was changed
+// in some way or another for balance or fun reasons, or to make a certain weapon stand out more and be unique. I don't claim to own the models or most of the sounds, so if any of you are reading this, do with this as you please.
+//
+	"items"
+	{
+/////////////////////
+// SCOUT PRIMARIES //
+/////////////////////
+		"3001" // Rough Rider
+		{
+			"name"				"TF_WEAPON_ROUGHRIDER"
+			"item_name"			"Rough Rider"
+			"item_type_name"	"#TF_Weapon_Scattergun"
+			"item_description"	"#TF_Weapon_Scattergun_Desc"
+			"item_quality"		"normal"
+
+			"item_class"	"tf_weapon_scattergun"
+			"item_slot"		"primary"
+			"baseitem"		"0"
+			"used_by_classes"
+			{
+				"Scout"	"1"
+			}
+
+			"model_player"		"models/weapons/v_models/v_scattergun_scout.mdl"
+			"model_world"		"models/weapons/w_models/w_scattergun.mdl"
+			"attach_to_hands"	"2"
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -11"
+			}
+			
+			"image_inventory"		"backpack/weapons/w_models/w_scattergun"
+			"mouse_pressed_sound"	"ui/item_medium_gun_pickup.wav"
+			"drop_sound"			"ui/item_heavy_gun_drop.wav"
+		}
+		"3002" // Hooligan Harmer
+		{
+			"name"				"TF_WEAPON_HOOLIGANHARMER"
+			"prefab" 			"valve weapon_force_a_nature"
+			"item_name"			"Hooligan Harmer"
+			"item_type_name"	"#TF_Weapon_Scattergun"
+			"item_description"	"#TF_Weapon_Scattergun_Desc"
+			"item_quality"		"normal"
+
+			"item_class"	"tf_weapon_scattergun"
+			"item_slot"		"primary"
+			"baseitem"		"0"
+			"used_by_classes"
+			{
+				"Scout"	"1"
+			}
+
+			"model_player"		"models/weapons/v_models/v_scattergun_scout.mdl"
+			"model_world"		"models/weapons/w_models/w_scattergun.mdl"
+			"attach_to_hands"	"2"
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -11"
+			}
+			
+			"image_inventory"		"backpack/weapons/w_models/w_scattergun"
+			"mouse_pressed_sound"	"ui/item_medium_gun_pickup.wav"
+			"drop_sound"			"ui/item_heavy_gun_drop.wav"
+		}
+		"3003" // Force-A-Nature
+		{
+			"name"	"The Force-a-Nature"
+			"prefab"	"valve weapon_force_a_nature"
+			"first_sale_date"	"2010/09/29"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"skin_red" "0"
+						"skin_blu" "1"
+						"selectable"	"0"
+					}
+					"1"
+					{
+						"skin_red"	"2"
+						"skin_blu"	"3"
+						"selectable"	"0"
+						"image_inventory"	"backpack/weapons/c_models/c_double_barrel_gold"
+					}
+				}
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/weapons/c_models/c_double_barrel_festivizer.mdl"
+					}
+				}
+			}
+		}
+	}
+}
