@@ -3196,24 +3196,17 @@
 			"prefab" "weapon_scattergun"
 			"first_sale_date" "2012/06/27"
 			"item_class" "tf_weapon_pep_brawler_blaster"
-			"tags"
-			{
-				"can_deal_damage" "1"
-				"can_deal_critical_damage" "1"
-				"can_deal_mvm_penetration_damage" "1"
-				"can_deal_long_distance_damage" "1"
-			}
 			"show_in_armory" "1"
 			"item_type_name" "#TF_Weapon_Scattergun"
-			"item_name" "#TF_Weapon_PEP_Scattergun"
-			"item_description" "#TF_Weapon_PEP_Scattergun_Desc"
-			"item_quality" "vintage"
+			"item_name" "Dead Drop"
+			"item_description" "Gains speed boost on damage, mini-crits from behind!"
+			"item_quality"		"normal"
 			"baseitem" "0"
 			"min_ilevel" "10"
 			"max_ilevel" "10"
 			"inspect_panel_dist" "38"
-			"image_inventory" "backpack/workshop/weapons/c_models/c_pep_scattergun/c_pep_scattergun"
-			"model_player" "models/workshop/weapons/c_models/c_pep_scattergun/c_pep_scattergun.mdl"
+			"image_inventory" "backpack/weapons/c_models/c_dead_drop"
+			"model_player" "models/weapons/c_models/c_dead_drop.mdl"
 			"attach_to_hands" "1"
 			"static_attrs"
 			{
@@ -3221,6 +3214,7 @@
 			}
 			"attributes"
 			{
+				"hidden separator" "1"
 				"closerange backattack minicrits"
 				{
 					"attribute_class" "closerange_backattack_minicrits"
@@ -3236,11 +3230,6 @@
 					"attribute_class" "boost_on_damage"
 					"value" "1"
 				}
-				"hype resets on jump"
-				{
-					"attribute_class" "hype_resets_on_jump"
-					"value" "25"
-				}
 				"lose hype on take damage"
 				{
 					"attribute_class" "lose_hype_on_take_damage"
@@ -3250,6 +3239,11 @@
 				{
 					"attribute_class" "mult_clipsize"
 					"value" "0.66"
+				}
+				"bullets per shot penalty"
+				{
+					"attribute_class" 	"mult_bullets_per_shot"
+					"value" "0.8"
 				}
 			}
 			"visuals"
@@ -3261,81 +3255,8 @@
 						"model" "models/workshop/weapons/c_models/c_pep_scattergun/c_pep_scattergun_festivizer.mdl"
 					}
 				}
-				"sound_single_shot" "Weapon_Brawler_Blaster.Single"
-				"sound_burst" "Weapon_Brawler_Blaster.SingleCrit"
-			}
-		}
-		"1103"
-		{
-			"name" "The Back Scatter"
-			"prefab" "weapon_scattergun"
-			"first_sale_date" "2014/06/18"
-			"item_class" "tf_weapon_scattergun"
-			"item_type_name" "#TF_Weapon_Scattergun"
-			"propername" "1"
-			"item_name" "#TF_Weapon_BackScatter"
-			"item_description" "#TF_Weapon_BackScatter_Desc"
-			"capabilities"
-			{
-				"can_craft_count" "1"
-			}
-			"tags"
-			{
-				"can_deal_damage" "1"
-				"can_deal_critical_damage" "1"
-				"can_deal_mvm_penetration_damage" "1"
-				"can_deal_long_distance_damage" "1"
-				"can_be_festivized" "1"
-			}
-			"show_in_armory" "1"
-			"item_logname" "back_scatter"
-			"item_iconname" "back_scatter"
-			"item_quality" "vintage"
-			"baseitem" "0"
-			"min_ilevel" "1"
-			"max_ilevel" "100"
-			"inspect_panel_dist" "38"
-			"image_inventory" "backpack/workshop/weapons/c_models/c_scatterdrum/c_scatterdrum"
-			"model_player" "models/workshop/weapons/c_models/c_scatterdrum/c_scatterdrum.mdl"
-			"attach_to_hands" "1"
-			"static_attrs"
-			{
-				"min_viewmodel_offset" "10 0 -10"
-			}
-			"attributes"
-			{
-				"closerange backattack minicrits"
-				{
-					"attribute_class" "closerange_backattack_minicrits"
-					"value" "1"
-				}
-				"clip size penalty"
-				{
-					"attribute_class" "mult_clipsize"
-					"value" "0.66"
-				}
-				"spread penalty"
-				{
-					"attribute_class" "mult_spread_scale"
-					"value" "1.20"
-				}
-				"crit mod disabled"
-				{
-					"attribute_class" "mult_crit_chance"
-					"value" "0"
-				}
-			}
-			"visuals"
-			{
-				"attached_models_festive"
-				{
-					"0"
-					{
-						"model" "models/workshop/weapons/c_models/c_scatterdrum/c_scatterdrum_festivizer.mdl"
-					}
-				}
 				"sound_single_shot" "Weapon_Back_Scatter.Single"
-				"sound_burst" "Weapon_Back_Scatter.SingleCrit"
+				"sound_burst" 		"Weapon_Back_Scatter.SingleCrit"
 			}
 		}
 		"449"
@@ -10464,23 +10385,23 @@
 				"can_deal_mvm_penetration_damage" "1"
 				"can_deal_long_distance_damage" "1"
 			}
-			"base_item_name" "The Force-a-Nature"
+			"base_item_name" "The Quad-Off"
 			"show_in_armory" "1"
-			"item_type_name" "#TF_Weapon_Scattergun"
-			"item_name" "#TF_Unique_Achievement_Scattergun_Double"
-			"item_description" "#TF_Unique_Achievement_Scattergun_Double_desc"
+			"item_type_name"	"#TF_Weapon_Scattergun"
+			"item_name" "Quad-Off"
+			"item_description" "Extreme knockback, damage, lower health faster fire rate!"
 			"item_logname" "force_a_nature"
 			"item_iconname" "force_a_nature"
 			"item_slot" "primary"
 			"anim_slot" "item2"
-			"item_quality" "vintage"
+			"item_quality" "normal"
 			"propername" "1"
 			"min_ilevel" "10"
 			"max_ilevel" "10"
-			"image_inventory" "backpack/weapons/c_models/c_double_barrel"
+			"image_inventory" "backpack/weapons/c_models/c_quad_off"
 			"image_inventory_size_w" "128"
 			"image_inventory_size_h" "82"
-			"model_player" "models/weapons/c_models/c_double_barrel.mdl"
+			"model_player" "models/weapons/c_models/c_quad_off.mdl"
 			"attach_to_hands" "1"
 			"inspect_panel_dist" "38"
 			"used_by_classes"
@@ -10493,40 +10414,56 @@
 			}
 			"attributes"
 			{
+				"hidden separator" "1"
 				"scattergun has knockback"
 				{
 					"attribute_class" "set_scattergun_has_knockback"
 					"value" "1"
 				}
-				"fire rate bonus"
+				"fire rate bonus with reduced health"
 				{
-					"attribute_class" "mult_postfiredelay"
-					"value" "0.5"
+					"attribute_class"		"mult_postfiredelay_with_reduced_health"
+					"value"					"0.75"
 				}
-				"bullets per shot bonus"
+				"damage bonus"
 				{
-					"attribute_class" "mult_bullets_per_shot"
-					"value" "1.2"
-				}
-				"damage penalty"
-				{
-					"attribute_class" "mult_dmg"
-					"value" "0.9"
+					"attribute_class"		"mult_dmg"
+					"value"					"1.25"
 				}
 				"clip size penalty"
 				{
-					"attribute_class" "mult_clipsize"
-					"value" "0.34"
+					"attribute_class"	"mult_clipsize"
+					"value"				"0.67"
 				}
 				"scattergun no reload single"
 				{
 					"attribute_class" "set_scattergun_no_reload_single"
 					"value" "1"
 				}
+				"punch angle mod add hidden"
+				{
+					"attribute_class"	"punch_angle_mod"
+					"value" 			"30"
+				}
 				"disable fancy class select anim"
 				{
 					"attribute_class" "disable_fancy_class_select_anim"
 					"value" "1"
+				}
+				"apply self knockback"
+				{
+					"attribute_class"		"apply_self_knockback"
+					"value"					"85"
+				}
+				"reload time increased hidden"
+                {
+                    "attribute_class"    "mult_reload_time_hidden"
+                    "value"              "2"
+                }
+				"spread penalty"
+				{
+					"attribute_class"		"mult_spread_scale"
+					"value"					"2.25"
 				}
 			}
 			"visuals"
