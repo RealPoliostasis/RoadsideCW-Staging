@@ -3113,10 +3113,12 @@
 		}
 		"220"
 		{
-			"name" "Rough Rider"
-			"prefab" "weapon_scattergun paintkit_base"
+			"name" 				"Rough Rider"
+			"prefab" 			"weapon_scattergun paintkit_base"
 			"item_name"			"Rough Rider"
 			"item_type_name"	"#TF_Weapon_Scattergun"
+			"item_logname" 		"pep_brawlerblaster"
+			"item_iconname" 	"pep_brawlerblaster"
 			"item_description"	"Successive hits mini-crits!"
 			"image_inventory" 	"backpack/workshop/weapons/c_models/c_rough_rider/c_rough_rider"
 			"model_player" 		"models/workshop/weapons/c_models/c_rough_rider/c_rough_rider.mdl"
@@ -3128,22 +3130,22 @@
 				"hidden separator" "1"
 				"clip size bonus"
 				{
-					"attribute_class" "mult_clipsize"
+					"attribute_class" 	"mult_clipsize"
 					"value" "1.34"
 				}
 				"fire rate bonus"
 				{
-					"attribute_class" "mult_postfiredelay"
+					"attribute_class" 	"mult_postfiredelay"
 					"value" "0.75"
 				}
 				"weapon spread bonus"
 				{
-					"attribute_class" "mult_spread_scale"
+					"attribute_class" 	"mult_spread_scale"
 					"value" "0.5"
 				}
 				"bullets per shot penalty"
 				{
-					"attribute_class" "mult_bullets_per_shot"
+					"attribute_class" 	"mult_bullets_per_shot"
 					"value" "0.5"
 				}
 				"add condition on hit self"
@@ -3190,31 +3192,21 @@
 		}
 		"772"
 		{
-			"name" "Baby Face\'s Blaster"
+			"name" "Dead Drop"
 			"prefab" "weapon_scattergun"
 			"first_sale_date" "2012/06/27"
-			"item_class" "tf_weapon_bat_wood"
-			"capabilities"
-			{
-				"can_craft_count" "1"
-			}
+			"item_class" "tf_weapon_pep_brawler_blaster"
 			"tags"
 			{
 				"can_deal_damage" "1"
 				"can_deal_critical_damage" "1"
 				"can_deal_mvm_penetration_damage" "1"
 				"can_deal_long_distance_damage" "1"
-				"can_be_festivized" "1"
 			}
 			"show_in_armory" "1"
 			"item_type_name" "#TF_Weapon_Scattergun"
 			"item_name" "#TF_Weapon_PEP_Scattergun"
-			"item_slot"	"primary"
-			"bucket"					"0"
-			"bucket_position"			"0"
 			"item_description" "#TF_Weapon_PEP_Scattergun_Desc"
-			"item_logname" "pep_brawlerblaster"
-			"item_iconname" "pep_brawlerblaster"
 			"item_quality" "vintage"
 			"baseitem" "0"
 			"min_ilevel" "10"
@@ -3229,10 +3221,10 @@
 			}
 			"attributes"
 			{
-				"maxammo grenades1 increased"
+				"closerange backattack minicrits"
 				{
-					"attribute_class"	"mult_maxammo_grenades1"
-					"value" 			"32"
+					"attribute_class" "closerange_backattack_minicrits"
+					"value" "1"
 				}
 				"move speed penalty"
 				{
@@ -3247,27 +3239,12 @@
 				"hype resets on jump"
 				{
 					"attribute_class" "hype_resets_on_jump"
-					"value" "75"
+					"value" "25"
 				}
 				"lose hype on take damage"
 				{
 					"attribute_class" "lose_hype_on_take_damage"
-					"value" "4"
-				}
-				"custom projectile model"
-				{
-					"attribute_class"	"custom_projectile_model"
-					"value"				"models/weapons/w_models/w_baseball.mdl"
-				}
-				"apply look velocity on damage" 
-				{
-					"attribute_class"	"apply_look_velocity_on_damage"
-					"value"				"-100"
-				}
-				"apply look velocity on damage" 
-				{
-					"attribute_class"	"apply_z_velocity_on_damage"
-					"value"				"-450"
+					"value" "1"
 				}
 				"clip size penalty"
 				{
