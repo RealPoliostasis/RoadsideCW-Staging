@@ -6911,8 +6911,6 @@
 						"model" "models/workshop/weapons/c_models/c_tomislav/c_tomislav_festivizer.mdl"
 					}
 				}
-				"trail_effect"			"halloween_rockettrail"
-				"explosion_effect"		"rocketpack_exhaust"
 			}
 		}
 		"811"
@@ -12943,6 +12941,26 @@
 			"drop_sound" "ui/item_heavy_gun_drop.wav"
 			"attributes"
 			{
+				"Blast radius decreased"
+				{
+					"attribute_class" "mult_explosion_radius"
+					"value" "0.25"
+				}
+				"rocket jump damage reduction"
+				{
+					"attribute_class"	"rocket_jump_dmg_reduction"
+					"value"				"0.6"
+				}
+				"add ammo on kill"																// Since it only gives back 2 ammo on a kill, though, you'll have to pick up ammo along the way
+				{
+					"attribute_class"	"add_ammo_on_kill"
+					"value"				"5"
+				}
+				"rocket gravity"
+				{
+					"attribute_class"	"mod_rocket_gravity"
+					"value"				"0.5"
+				}
 				"minigun spinup time decreased"
 				{
 					"attribute_class" "mult_minigun_spinup_time"
@@ -12966,7 +12984,7 @@
 				"fire rate penalty"
 				{
 					"attribute_class" "mult_postfiredelay"
-					"value" "1.2"
+					"value" "1"
 				}
 				"override projectile type"
 				{
@@ -12983,11 +13001,16 @@
 					"attribute_class" "projectile_spread_angle"
 					"value" "1"
 				}
-				"rocket limited lifetime"
+				"custom rampup"
 				{
-					"attribute_class"	"rocket_lifetime"
-					"value"				"0.4"
+					"attribute_class"	"mod_custom_rampup"
+					"value" 			"1"
 				}
+//				"rocket limited lifetime"
+//				{
+//					"attribute_class"	"rocket_lifetime"
+//					"value"				"0.4"
+//				}
 			}
 		}
 		"weapon_long_heatmaker"
