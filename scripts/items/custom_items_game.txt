@@ -13081,6 +13081,11 @@
 					"attribute_class"	"minigun_deployed_crouchwalk"
 			    	"value"				"1"
 				}
+				"minicrit vs burning player"											
+				{
+					"attribute_class"	"or_minicrit_vs_playercond_burning"
+					"value"				"1"
+				}
 				"aiming movespeed increased"											
 				{
 					"attribute_class"	"mult_player_aiming_movespeed"
@@ -13098,8 +13103,8 @@
 				}
 				"ring of fire while aiming"
 				{
-					"attribute_class" "ring_of_fire_while_aiming"
-					"value" 		"12"
+					"attribute_class"	"ring_of_fire_while_aiming"
+					"value" 			"12"
 				}
 				"uses ammo while aiming"
 				{
@@ -13109,7 +13114,7 @@
 				"weapon spread bonus"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value"				"0.5" 
+					"value"				"0.7" 
 				}
 				"bullets per shot penalty"
 				{
@@ -13119,7 +13124,7 @@
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"				"1.3"
+					"value"				"1"
 				}
 				"minigun spinup time decreased"
 				{
