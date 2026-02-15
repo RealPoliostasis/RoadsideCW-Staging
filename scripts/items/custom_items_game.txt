@@ -1627,6 +1627,11 @@
 			}
 			"attributes"
 			{
+				"sniper beep with enemy under crosshair"
+				{
+					"attribute_class" "sniper_beep_with_enemy_under_crosshair"
+					"value" "1"
+				}
 				"max health additive bonus"
 				{
 					"attribute_class"	"add_maxhealth"
@@ -3148,6 +3153,11 @@
 					"attribute_class" 	"mult_bullets_per_shot"
 					"value" "0.5"
 				}
+				"Reload time decreased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"				"0.75"
+				}
 				"add condition on hit self"
 				{
 					"attribute_class"	"add_onhit_addcond_self_weapon"
@@ -3174,10 +3184,10 @@
 			}
 			"attributes"
 			{
-				"minicritboost on kill"
+				"kill combo fire rate boost"
 				{
-					"attribute_class" "add_onkill_minicritboost_time"
-					"value" "3"
+					"attribute_class" "kill_combo_fire_rate_boost"
+					"value" "0.25"
 				}
 			}
 			"visuals"
@@ -3509,6 +3519,11 @@
 				{
 					"attribute_class" "set_weapon_mode"
 					"value" "1"
+				}
+				"teleport instead of die"
+				{
+					"attribute_class" "teleport_instead_of_die"
+					"value" "0.5"
 				}
 				"max health additive penalty"
 				{
@@ -4237,6 +4252,11 @@
 			"drop_sound" "ui/item_heavy_gun_drop.wav"
 			"attributes"
 			{
+				"Projectile speed increased"
+				{
+					"attribute_class" "mult_projectile_speed"
+					"value" "1.4"
+				}
 				"Projectile speed increased"
 				{
 					"attribute_class" "mult_projectile_speed"
@@ -6885,11 +6905,6 @@
 			}
 			"attributes"
 			{
-				"minigun spinup time increased"
-				{
-					"attribute_class" "mult_minigun_spinup_time"
-					"value" "1.25"
-				}
 			}
 		}
 		"424"
@@ -8421,10 +8436,15 @@
 					"attribute_class" "mult_player_movespeed_resource_level"
 					"value" "1.2"
 				}
-				"lunchbox adds minicrits"
+				"ubercharge ammo"
 				{
-					"attribute_class" "set_weapon_mode"
-					"value" "1"
+					"attribute_class" "ubercharge_ammo"
+					"value" "100"
+				}
+				"ubercharge transfer"
+				{
+					"attribute_class" "ubercharge_transfer"
+					"value" "5"
 				}
 				"damage penalty"
 				{
@@ -9108,6 +9128,11 @@
 					"attribute_class" "decapitate_type"
 					"value" "1"
 				}
+				"sniper beep with enemy under crosshair"
+				{
+					"attribute_class" "sniper_beep_with_enemy_under_crosshair"
+					"value" "1"
+				}
 				"damage penalty on bodyshot"
 				{
 					"attribute_class" "bodyshot_damage_modify"
@@ -9207,6 +9232,21 @@
 			}
 			"attributes"
 			{
+				"sniper beep with enemy under crosshair"
+				{
+					"attribute_class" "sniper_beep_with_enemy_under_crosshair"
+					"value" "1"
+				}
+				"projectile penetration heavy"
+				{
+					"attribute_class" "projectile_penetration"
+					"value" "2"
+				}
+				"penetration damage penalty"
+				{
+					"attribute_class" "penetration_damage_penalty"
+					"value" "0.5"
+				}
 				"crit on hard hit"
 				{
 					"attribute_class" "crit_on_hard_hit"
@@ -10431,7 +10471,7 @@
 				"damage bonus"
 				{
 					"attribute_class"		"mult_dmg"
-					"value"					"1.25"
+					"value"					"1.3"
 				}
 				"clip size penalty"
 				{
@@ -10446,7 +10486,7 @@
 				"punch angle mod add hidden"
 				{
 					"attribute_class"	"punch_angle_mod"
-					"value" 			"30"
+					"value" 			"50"
 				}
 				"disable fancy class select anim"
 				{
@@ -10456,7 +10496,7 @@
 				"apply self knockback"
 				{
 					"attribute_class"		"apply_self_knockback"
-					"value"					"85"
+					"value"					"125"
 				}
 				"reload time increased hidden"
                 {
@@ -10466,7 +10506,7 @@
 				"spread penalty"
 				{
 					"attribute_class"		"mult_spread_scale"
-					"value"					"2.25"
+					"value"					"2"
 				}
 			}
 			"visuals"
@@ -10652,7 +10692,7 @@
 				"fire rate bonus"
 				{
 					"attribute_class" "mult_postfiredelay"
-					"value" "0.5"
+					"value" "1"
 				}
 				"clip size penalty"
 				{
@@ -11154,10 +11194,10 @@
 					"attribute_class" "mult_dmg"
 					"value" "0.85"
 				}
-				"rocket jump damage reduction"
+				"aoe blast on damage"
 				{
-					"attribute_class" "rocket_jump_dmg_reduction"
-					"value" "0.85"
+					"attribute_class" "aoe_blast_on_damage"
+					"value" "50"
 				}
 				"rocketjump attackrate bonus"
 				{
@@ -12867,25 +12907,30 @@
 			"drop_sound" "ui/item_heavy_gun_drop.wav"
 			"attributes"
 			{
-				"damage bonus"
+//				"custom falloff"
+//				{
+//					"attribute_class"	"mod_custom_falloff"
+//					"value"				"-0.25"
+//				}
+				"custom rampup"
 				{
-					"attribute_class" "mult_dmg"
-					"value" "1.20"
+					"attribute_class"	"mod_custom_rampup"
+					"value" 			"0.05"
 				}
-				"minigun spinup time increased"
+				"longer damage falloff distance"
 				{
-					"attribute_class" "mult_minigun_spinup_time"
-					"value" "1.5"
-				}
-				"aiming movespeed decreased"
-				{
-					"attribute_class" "mult_player_aiming_movespeed"
-					"value" "0.4"
+					"attribute_class"	"mult_falloff_distance"
+					"value"				"-1000"
 				}
 				"spunup_damage_resistance"
 				{
 					"attribute_class" "spunup_damage_resistance"
 					"value" "0.80"
+				}
+				"damage penalty"
+				{
+					"attribute_class" "mult_dmg"
+					"value" "0.4"
 				}
 			}
 		}
@@ -12910,6 +12955,9 @@
 			"show_in_armory" "1"
 			"item_type_name" "#TF_Weapon_Minigun"
 			"item_name" "Hull Breacher"
+			"item_description" "Fires two extremely fast artillery shells per shot
+
+Zero ramp-up damage"
 			"item_slot" "primary"
 			"item_logname" "tomislav"
 			"item_iconname" "tomislav"
@@ -12941,6 +12989,7 @@
 			"drop_sound" "ui/item_heavy_gun_drop.wav"
 			"attributes"
 			{
+				"hidden separator" "1"
 				"Blast radius decreased"
 				{
 					"attribute_class" "mult_explosion_radius"
@@ -12949,7 +12998,7 @@
 				"rocket jump damage reduction"
 				{
 					"attribute_class"	"rocket_jump_dmg_reduction"
-					"value"				"0"
+					"value"				"0.25"
 				}
 				"add ammo on kill"																// Since it only gives back 2 ammo on a kill, though, you'll have to pick up ammo along the way
 				{
@@ -13004,7 +13053,7 @@
 				"custom rampup"
 				{
 					"attribute_class"	"mod_custom_rampup"
-					"value" 			"1.1"
+					"value" 			"1"
 				}
 				"self dmg push force decreased"
 				{
@@ -13023,7 +13072,7 @@
 //				}
 			}
 		}
-		"weapon_long_heatmaker"
+		"weapon_long_heatmaker" //VLADISLAVA
 		{
 			"first_sale_date" "2012/08/02"
 			"enabled" "1"
@@ -13044,19 +13093,22 @@
 				"can_deal_posthumous_damage" "1"
 				"can_be_festivized" "1"
 			}
-			"base_item_name" "The Drive By"
+			"base_item_name" "Vladislava"
 			"show_in_armory" "1"
 			"item_type_name" "Bike Minigun Hybrid"
-			"item_name" "Drive By"
+			"item_name" "Vladislava"
+			"item_description" "Creates ring of flames, move faster while revved, more accurate, mini-crits targets on fire!
+
+Consumes 6 ammo per second revved, increased push force taken, bullets per shot is halved"
 			"item_slot" "primary"
 			"item_logname" "long_heatmaker"
 			"item_iconname" "long_heatmaker"
-			"image_inventory" "backpack/workshop_partner/weapons/c_models/c_canton/c_canton"
+			"image_inventory" "backpack/weapons/w_models/w_vladislava"
 			"image_inventory_size_w" "128"
 			"image_inventory_size_h" "82"
-			"model_player" "models/workshop_partner/weapons/c_models/c_drive_by/c_drive_by.mdl"
+			"model_player" "models/weapons/c_models/c_vladislava/c_vladislava.mdl"
 			"attach_to_hands" "1"
-			"propername" "1"
+			"propername" "0"
 			"item_quality" "normal"
 			"used_by_classes"
 			{
@@ -13076,11 +13128,7 @@
 			}
 			"attributes"
 			{
-				"move speed bonus"
-				{
-					"attribute_class" "mult_player_movespeed"
-					"value" "1"
-				}
+				"hidden separator" "1"
 				"minigun deployed crouchwalk"
 				{
 					"attribute_class"	"minigun_deployed_crouchwalk"
@@ -13106,15 +13154,15 @@
 					"attribute_class"	"damage_force_reduction"
 					"value"				"2"
 				}
-//				"ring of fire while aiming"
-//				{
-//					"attribute_class"	"ring_of_fire_while_aiming"
-//					"value" 			"12"
-//				}
+				"ring of fire while aiming"
+				{
+					"attribute_class"	"ring_of_fire_while_aiming"
+					"value" 			"12"
+				}
 				"uses ammo while aiming"
 				{
 					"attribute_class" 	"uses_ammo_while_aiming"
-					"value" 			"2"
+					"value" 			"6"
 				}
 				"weapon spread bonus"
 				{
@@ -13480,6 +13528,11 @@
 				{
 					"attribute_class" "building_teleporting_pickup"
 					"value" "100"
+				}
+				"mult teleporter recharge rate"
+				{
+					"attribute_class" "mult_teleporter_recharge_rate"
+					"value" "0.1"
 				}
 				"arrow heals buildings"
 				{
@@ -22488,6 +22541,596 @@
 			"hidden"		"1"
 			"stored_as_integer"		"1"
 		}
+//----------------------------------------------------------------------------------------------------------------------------------
+// DEV ATTRIBUTES
+//----------------------------------------------------------------------------------------------------------------------------------
+    //if set to 1, the user cannot deploy parachutes
+    "4324"
+    {
+        "name"	"parachute disabled"
+        "attribute_class"	"parachute_disabled"
+        "description_string"	"parachute disable"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"negative"
+        "stored_as_integer"	"1"
+    }
+    //Secondary attack: crossbow fires milk bolt. Regenerates every x seconds as set in attribute
+    "4325"
+    {
+        "name"	"fires milk bolt"
+        "attribute_class"	"fires_milk_bolt"
+        "description_string"	"fires milk bolt"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"1"
+    }
+    //The bot with the attribute distributes its currency on death, like with sniper kills
+    "4326"
+    {
+        "name"	"force distribute currency on death"
+        "attribute_class"	"force_distribute_currency_on_death"
+        "description_string"	"force distribute currency on death"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"1"
+    }
+    //airblast pushes the pyro himself rather than others
+    "4327"
+    {
+        "name"	"airblast dashes"
+        "attribute_class"	"airblast_dashes"
+        "description_string"	"force distribute currency on death"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"1"
+    }
+    //Melee weapon attacks all enemies in range
+    "4328"
+    {
+        "name"	"melee cleave attack"
+        "attribute_class"	"melee_cleave_attack"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"1"
+    }
+    //Special mode for revolver: each hit reduces damage, up to x times. Likely does not work 
+    "4329"
+    {
+        "name"	"extra damage on hit penalty"
+        "attribute_class"	"extra_damage_on_hit_penalty"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"1"
+    }
+    "4330"
+    {
+        "name"	"extra damage on hit"
+        "attribute_class"	"extra_damage_on_hit"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"1"
+    }
+    //Grants the players speed buff for 4 seconds after leaving teleporter
+    "4331"
+    {
+        "name"	"mod teleporter speed boost"
+        "attribute_class"	"mod_teleporter_speed_boost"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"1"
+    }
+    //Turns the victim ragdoll to ice. Does not work
+    "4332"
+    {
+        "name"	"set turn to ice"
+        "attribute_class"	"set_turn_to_ice"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"1"
+    }
+    //Can player breathe underwater
+    "4333"
+    {
+        "name"	"can breathe under water"
+        "attribute_class"	"can_breathe_under_water"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"1"
+    }
+    //If set to 1 player cannon swim
+    "4334"
+    {
+        "name"	"cannot swim"
+        "attribute_class"	"cannot_swim"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"1"
+    }
+    //If set to 1 player can swim faster
+    "4335"
+    {
+        "name"	"swimming mastery"
+        "attribute_class"	"swimming_mastery"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"1"
+    }
+    //If set to 1 player move his teleporter with double tapped movement keys. Does not work
+    "4336"
+    {
+        "name"	"ability doubletap teleport"
+        "attribute_class"	"ability_doubletap_teleport"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"1"
+    }
+    //A worse version of damage piercing since it only ignores battalion backup 35% reduction. Not working?
+    "4337"
+    {
+        "name"	"mod ignore resists absorbs"
+        "attribute_class"	"mod_ignore_resists_absorbs"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"1"
+    }
+    //Players with this attribute are granted more points for kills but lose points after death
+    "4338"
+    {
+        "name"	"scoreboard minigame"
+        "attribute_class"	"scoreboard_minigame"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"1"
+    }
+    //Is the player immune to wet statuses like jarate or mad milk
+    "4339"
+    {
+        "name"	"wet immunity"
+        "attribute_class"	"wet_immunity"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"1"
+    }
+    //Huntsman: reduces shoot time 40%/70%, same functionality as faster reload rate but limited to 2 points
+    //Sniper rifle: reduces zoom time 40%/70% (like reload rate does). increases charge rate 50%/200%, but actually 100% due to the cap
+    "4340"
+    {
+        "name"	"ability master sniper"
+        "attribute_class"	"ability_master_sniper"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"1"
+    }
+    //Last revolver shot in the clip is critical
+    "4341"
+    {
+        "name"	"last shot crits"
+        "attribute_class"	"last_shot_crits"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"1"
+    }
+    //Keep disguise after attacking. Revolver only
+    "4343"
+    {
+        "name"	"keep disguise on attack"
+        "attribute_class"	"keep_disguise_on_attack"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"1"
+    }
+    //On hit ally: heal your teammate for x health, draining your own health. Melee only
+    "4344"
+    {
+        "name"	"add give health to teammate on hit"
+        "attribute_class"	"add_give_health_to_teammate_on_hit"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"1"
+    }
+    //Combination of flamethrower flags, used to limit airblast functionality. You have to add those numbers to enable specific functions (by default all are enabled):
+    //1 - If airblast should push players
+    //2 - If airblast can put out afterburn
+    //4 - If airblast can reflect projectiles
+    //8 - If airblast can stun players
+    //16 - If airblast disrupts player aim
+    "4345"
+    {
+        "name"	"airblast functionality flags"
+        "attribute_class"	"airblast_functionality_flags"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"1"
+    }
+    //airblast pushes players towards the pyro. Not working?
+    "4346"
+    {
+        "name"	"reverse airblast"
+        "attribute_class"	"reverse_airblast"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"1"
+    }
+    "4347"
+    {
+        "name"	"mod minigun can holster while spinning"
+        "attribute_class"	"mod_minigun_can_holster_while_spinning"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"1"
+    }
+    //Probably does nothing
+    "4348"
+    {
+        "name"	"sapper deploy time"
+        "attribute_class"	"sapper_deploy_time"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"1"
+    }
+    //On kill: gives x% fire rate bonus, stacks up to 3 times. Killing different class clears the combo
+    "4349"
+    {
+        "name"	"kill combo fire rate boost"
+        "attribute_class"	"kill_combo_fire_rate_boost"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //Healh and ammo dispenser rate
+    "4350"
+    {
+        "name"	"mult dispenser rate"
+        "attribute_class"	"mult_dispenser_rate"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_percentage"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //Sentry max ammo multiplier
+    "4351"
+    {
+        "name"	"mvm sentry ammo"
+        "attribute_class"	"mvm_sentry_ammo"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_percentage"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //Sentry is 20% smaller. 33% less health, 25% less metal required to upgrade
+    "4353"
+    {
+        "name"	"build small sentries"
+        "attribute_class"	"build_small_sentries"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //Teleporter recharge duration multiplier
+    "4354"
+    {
+        "name"	"mult teleporter recharge rate"
+        "attribute_class"	"mult_teleporter_recharge_rate"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_percentage"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //As spy, disguise as dispenser when crouching
+    "4355"
+    {
+        "name"	"disguise as dispenser on crouch"
+        "attribute_class"	"disguise_as_dispenser_on_crouch"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //On hit, as a medic, with "ubercharge ammo" Syringegun : transfer x% of used uber to enemy medic
+    "4356"
+    {
+        "name"	"ubercharge transfer"
+        "attribute_class"	"ubercharge_transfer"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //On death: x% chance of being immediately revived at spawn with 1 health
+    "4357"
+    {
+        "name"	"teleport instead of die"
+        "attribute_class"	"teleport_instead_of_die"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //Flare homing seek power in degrees per second, when the target is ignited
+    "4358"
+    {
+        "name"	"mod projectile heat seek power"
+        "attribute_class"	"mod_projectile_heat_seek_power"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //Damage vs same class multipler
+    "4359"
+    {
+        "name"	"mult dmg vs same class"
+        "attribute_class"	"mult_dmg_vs_same_class"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_percentage"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //On take damage: x% chance of gaining invicibility for 3 seconds
+    "4360"
+    {
+        "name"	"uber on damage taken"
+        "attribute_class"	"uber_on_damage_taken"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //Damage taken from melee multipier
+    "4361"
+    {
+        "name"	"mult dmgtaken from melee"
+        "attribute_class"	"mult_dmgtaken_from_melee"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_percentage"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //Player is crit boosted when below x% health
+    "4362"
+    {
+        "name"	"mult crit when health is below percent"
+        "attribute_class"	"mult_crit_when_health_is_below_percent"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_percentage"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //Penetrated players receive only x% damage. Bullets only. Can be damage bonus despite the name
+    "4363"
+    {
+        "name"	"penetration damage penalty"
+        "attribute_class"	"penetration_damage_penalty"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_percentage"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //Player is pushed x units and speed boosted when firing flamethrower. Limited by ground move speed
+    "4364"
+    {
+        "name"	"firing forward pull"
+        "attribute_class"	"firing_forward_pull"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //x% soldier buff range bonus
+    "4365"
+    {
+        "name"	"mod soldier buff range"
+        "attribute_class"	"mod_soldier_buff_range"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_percentage"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //Deploy speed bonus when rocket jumping
+    "4366"
+    {
+        "name"	"mult rocketjump deploy time"
+        "attribute_class"	"mult_rocketjump_deploy_time"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_percentage"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //On hit: refire time * (x/60) % chance for aoe heal for 1s (24 hp healed total). use 60 for 100% chance on 1s refire time weapon, 600 for 0.1s
+    "4367"
+    {
+        "name"	"aoe heal chance"
+        "attribute_class"	"aoe_heal_chance"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //On hit: refire time * (x/60) % chance for crit boost for 3s.  use 60 for 100% chance on 1s refire time weapon, 600 for 0.1s
+    "4368"
+    {
+        "name"	"crits on damage"
+        "attribute_class"	"crits_on_damage"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //On hit: refire time * (x/60) % chance for stun for 3s. use 60 for 100% chance on 1s refire time weapon, 600 for 0.1s
+    "4369"
+    {
+        "name"	"stun on damage"
+        "attribute_class"	"stun_on_damage"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //On hit: refire time * (x/60) % chance for 100 hu blast that stuns players for 2 seconds and applies bleed. use 60 for 100% chance on 1s refire time weapon, 600 for 0.1s
+    "4370"
+    {
+        "name"	"aoe blast on damage"
+        "attribute_class"	"aoe_blast_on_damage"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //Uses ubercharge as ammo. 100 for full uber use. Syringegun only
+    "4371"
+    {
+        "name"	"ubercharge ammo"
+        "attribute_class"	"ubercharge_ammo"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //Fire rate multiplier when not rocket jumping
+    "4372"
+    {
+        "name"	"mul nonrocketjump attackrate"
+        "attribute_class"	"mul_nonrocketjump_attackrate"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_percentage"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //Grants up to x% damage bonus based on remaining health
+    "4373"
+    {
+        "name"	"mult dmg with reduced health"
+        "attribute_class"	"mult_dmg_with_reduced_health"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_percentage"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //Multiplier of how fast can pyro use primary fire again after airblasting.
+    "4374"
+    {
+        "name"	"mult airblast primary refire time"
+        "attribute_class"	"mult_airblast_primary_refire_time"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_percentage"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //Spin up time for flamethrowers in seconds
+    "4375"
+    {
+        "name"	"mod flamethrower spinup time"
+        "attribute_class"	"mod_flamethrower_spinup_time"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //Player pushback cone scale. Might not work after JI
+    "4376"
+    {
+        "name"	"mult airblast cone scale"
+        "attribute_class"	"mult_airblast_cone_scale"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_percentage"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //Sniper rifle charge rate when looking at the enemy. Still subject to the 200% charge rate limit
+    "4377"
+    {
+        "name"	"mult sniper charge per sec with enemy under crosshair"
+        "attribute_class"	"mult_sniper_charge_per_sec_with_enemy_under_crosshair"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_percentage"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
+    //Beeps when the sniper is looking at the enemy while charging, if set to 1
+    "4378"
+    {
+        "name"	"sniper beep with enemy under crosshair"
+        "attribute_class"	"sniper_beep_with_enemy_under_crosshair"
+        "description_string"	"melee cleave attack"
+        "description_format"	"value_is_additive"
+        "hidden"	"0"
+        "effect_type"	"positive"
+        "stored_as_integer"	"0"
+    }
 //----------------------------------------------------------------------------------------------------------------------------------
 // TF2CLASSIC ATTRIBUTES
 //----------------------------------------------------------------------------------------------------------------------------------
