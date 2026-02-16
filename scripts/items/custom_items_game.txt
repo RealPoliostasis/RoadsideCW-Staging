@@ -6814,17 +6814,20 @@
 			}
 			"show_in_armory" "1"
 			"item_type_name" "#TF_Weapon_Minigun"
-			"item_name" "#TF_Unique_Achievement_Minigun"
+			"item_name" "The Perforator"
+			"item_description" "Rapid fires high speed nails that slow enemies on hit
+
+Ammo drains much faster"
 			"item_slot" "primary"
 			"item_logname" "natascha"
 			"item_iconname" "natascha"
-			"image_inventory" "backpack/weapons/c_models/c_w_ludmila/c_w_ludmila"
+			"image_inventory" "backpack/weapons/w_models/w_perferator"
 			"image_inventory_size_w" "128"
 			"image_inventory_size_h" "82"
-			"model_player" "models/weapons/c_models/c_minigun/c_minigun_natascha.mdl"
+			"model_player" "models/weapons/c_models/c_perferator/c_perferator.mdl"
 			"inspect_panel_dist" "88"
 			"attach_to_hands" "1"
-			"item_quality" "vintage"
+			"item_quality" "normal"
 			"min_ilevel" "5"
 			"max_ilevel" "5"
 			"used_by_classes"
@@ -6837,30 +6840,36 @@
 			}
 			"attributes"
 			{
+				"hidden separator" "1"
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"				"0.75" 
+				}
+				"override projectile type"
+				{
+					"attribute_class" "override_projectile_type"
+					"value" "31"
+				}
 				"slow enemy on hit"
 				{
 					"attribute_class" "mult_onhit_enemyspeed"
-					"value" "1.0"
+					"value" "1"
+				}
+				"custom projectile origin offset"
+				{
+					"attribute_class" "custom_projectile_origin_offset"
+					"value" "65, 5, -28"
 				}
 				"damage penalty"
 				{
 					"attribute_class" "mult_dmg"
-					"value" "0.75"
+					"value" "1.5"
 				}
-				"minigun spinup time increased"
+				"fire rate penalty"
 				{
-					"attribute_class" "mult_minigun_spinup_time"
-					"value" "1.15"
-				}
-				"lunchbox adds minicrits"
-				{
-					"attribute_class" "set_weapon_mode"
-					"value" "1"
-				}
-				"spunup_damage_resistance"
-				{
-					"attribute_class" "spunup_damage_resistance"
-					"value" "0.80"
+					"attribute_class" "mult_postfiredelay"
+					"value" "0.5"
 				}
 			}
 			"visuals"
@@ -12956,8 +12965,9 @@
 			"item_type_name" "#TF_Weapon_Minigun"
 			"item_name" "Hull Breacher"
 			"item_description" "Fires two extremely fast artillery shells per shot
+Gain ammo on kill
 
-Zero ramp-up damage"
+No extra ramp-up damage"
 			"item_slot" "primary"
 			"item_logname" "tomislav"
 			"item_iconname" "tomislav"
@@ -12980,10 +12990,8 @@ Zero ramp-up damage"
 			}
 			"visuals"
 			{
-				"sound_empty"		"Weapon_AAGun.ClipEmpty"
-				"sound_double_shot"	"Weapon_Tomislav.Fire"
-				"sound_burst"		"Weapon_Tomislav.FireCrit"
-				"sound_special1"	"Weapon_AAGun.Explode"
+
+
 			}
 			"mouse_pressed_sound" "ui/item_heavy_gun_pickup.wav"
 			"drop_sound" "ui/item_heavy_gun_drop.wav"
