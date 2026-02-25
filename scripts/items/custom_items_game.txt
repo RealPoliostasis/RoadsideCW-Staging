@@ -3124,7 +3124,10 @@
 			"item_type_name"	"#TF_Weapon_Scattergun"
 			"item_logname" 		"pep_brawlerblaster"
 			"item_iconname" 	"pep_brawlerblaster"
-			"item_description"	"Successive hits mini-crits!"
+			"item_description"	"Successive hits mini-crits, higher clipsize, faster fire rate
+more accurate, faster reload time
+
+Halved bullets per shot"
 			"image_inventory" 	"backpack/workshop/weapons/c_models/c_rough_rider/c_rough_rider"
 			"model_player" 		"models/workshop/weapons/c_models/c_rough_rider/c_rough_rider.mdl"
 			"attach_to_hands" 	"1"
@@ -3156,7 +3159,7 @@
 				"Reload time decreased"
 				{
 					"attribute_class"	"mult_reload_time"
-					"value"				"0.75"
+					"value"				"0.85"
 				}
 				"add condition on hit self"
 				{
@@ -3212,7 +3215,9 @@
 			"show_in_armory" "1"
 			"item_type_name" "#TF_Weapon_Scattergun"
 			"item_name" "Dead Drop"
-			"item_description" "Gains speed boost on kill, mini-crits from behind!"
+			"item_description" "Gains speed boost on kill, mini-crits from behind
+			
+Lower clipsize, less bullets per shot"
 			"item_quality"		"normal"
 			"baseitem" "0"
 			"min_ilevel" "10"
@@ -6861,6 +6866,11 @@ Ammo drains much faster"
 					"attribute_class" "custom_projectile_origin_offset"
 					"value" "65, 5, -28"
 				}
+				"custom rampup"
+				{
+					"attribute_class"	"mod_custom_rampup"
+					"value" 			"1.75"
+				}
 				"damage penalty"
 				{
 					"attribute_class" "mult_dmg"
@@ -10441,7 +10451,9 @@ Ammo drains much faster"
 			"show_in_armory" "1"
 			"item_type_name"	"#TF_Weapon_Scattergun"
 			"item_name" "Quad-Off"
-			"item_description" "Extreme knockback, damage, lower health faster fire rate!"
+			"item_description" "Extreme knockback, damage, lower health faster fire rate
+			
+Extreme recoil, lower clipsize, longer reload time"
 			"item_logname" "force_a_nature"
 			"item_iconname" "force_a_nature"
 			"item_slot" "primary"
@@ -10510,7 +10522,7 @@ Ammo drains much faster"
 				"reload time increased hidden"
                 {
                     "attribute_class"    "mult_reload_time_hidden"
-                    "value"              "2"
+                    "value"              "1.5"
                 }
 				"spread penalty"
 				{
@@ -10672,12 +10684,14 @@ Ammo drains much faster"
 			"show_in_armory" "1"
 			"item_type_name" "#TF_Weapon_Scattergun"
 			"item_name" "#TF_SodaPopper"
-			"item_description" "#TF_SodaPopper_Desc"
+			"item_description" "Killing the same class repeatedly increases your fire rate
+
+Killing a different class resets your fire rate"
 			"item_logname" "soda_popper"
 			"item_iconname" "soda_popper"
 			"item_slot" "primary"
 			"anim_slot" "item2"
-			"item_quality" "vintage"
+			"item_quality" "normal"
 			"propername" "1"
 			"min_ilevel" "10"
 			"max_ilevel" "10"
@@ -10694,14 +10708,14 @@ Ammo drains much faster"
 			"static_attrs"
 			{
 				"min_viewmodel_offset" "10 0 -10"
-				"weapon_stattrak_module_scale" "0.5"
 			}
 			"attributes"
 			{
+				"hidden separator" "1"
 				"fire rate bonus"
 				{
 					"attribute_class" "mult_postfiredelay"
-					"value" "1"
+					"value" "0.75"
 				}
 				"clip size penalty"
 				{
@@ -12962,7 +12976,7 @@ Longer deploy time, longer reload time"
 				"can_deal_long_distance_damage" "1"
 			}
 			"show_in_armory" "1"
-			"item_type_name" "#TF_Weapon_Minigun"
+			"item_type_name"	"#TF_Weapon_AntiAircraftCannon"
 			"item_name" "Hull Breacher"
 			"item_description" "Fires two extremely fast artillery shells per shot
 Gain ammo on kill
@@ -12998,6 +13012,11 @@ No extra ramp-up damage"
 			"attributes"
 			{
 				"hidden separator" "1"
+				"damage bonus"
+				{
+					"attribute_class" "mult_dmg"
+					"value" "1.15"
+				}
 				"Blast radius decreased"
 				{
 					"attribute_class" "mult_explosion_radius"
