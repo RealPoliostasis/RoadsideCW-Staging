@@ -3341,6 +3341,8 @@ Lower clipsize, less bullets per shot"
 			"static_attrs"
 			{
 				"min_viewmodel_offset" "10 0 -10"
+				"energy weapon no ammo" "1"
+				"energy weapon charged shot" "1"
 			}
 			"attributes"
 			{
@@ -3369,6 +3371,22 @@ Lower clipsize, less bullets per shot"
 			{
 				"sound_single_shot" "Weapon_PickPocket_Pistol.Single"
 				"sound_burst" "Weapon_PickPocket_Pistol.SingleCrit"
+			}
+			"visuals_red"
+			{
+				"skin"		"0"
+				"sound_single_shot"		"Weapon_Capper.Single"
+				"sound_burst"		"Weapon_Capper.SingleCrit"
+				"muzzle_flash"		"muzzle_raygun_red"
+				"tracer_effect"		"bullet_tracer_raygun"
+			}
+			"visuals_blu"
+			{
+				"skin"		"1"
+				"sound_single_shot"		"Weapon_Capper.Single"
+				"sound_burst"		"Weapon_Capper.SingleCrit"
+				"muzzle_flash"		"muzzle_raygun_blue"
+				"tracer_effect"		"bullet_tracer_raygun"
 			}
 			"mouse_pressed_sound" "ui/item_light_gun_pickup.wav"
 			"drop_sound" "ui/item_light_gun_drop.wav"
@@ -7640,7 +7658,7 @@ Ammo drains much faster"
 		{
 			"name" "The Widowmaker"
 			"first_sale_date" "2011/08/11"
-			"item_class" "tf_weapon_shotgun_primary"
+			"item_class" "tf2c_weapon_hunting_revolver"
 			"craft_material_type" "weapon"
 			"craft_class" "weapon"
 			"capabilities"
@@ -7659,19 +7677,19 @@ Ammo drains much faster"
 			"item_type_name" "#TF_Weapon_Shotgun"
 			"item_logname" "widowmaker"
 			"item_iconname" "widowmaker"
-			"item_name" "#TF_DEX_Shotgun"
+			"item_name" "Infrequent Boom"
 			"item_description" "#TF_DEX_Shotgun_Desc"
 			"item_slot" "primary"
 			"show_in_armory" "1"
-			"item_quality" "vintage"
+			"item_quality" "normal"
 			"propername" "1"
 			"min_ilevel" "5"
 			"max_ilevel" "5"
 			"inspect_panel_dist" "38"
-			"image_inventory" "backpack/workshop_partner/weapons/c_models/c_dex_shotgun/c_dex_shotgun"
+			"image_inventory" "backpack/workshop_partner/weapons/c_models/c_infrequentboom_large.vtf"
 			"image_inventory_size_w" "128"
 			"image_inventory_size_h" "82"
-			"model_player" "models/workshop_partner/weapons/c_models/c_dex_shotgun/c_dex_shotgun.mdl"
+			"model_player" "models/workshop_partner/weapons/c_models/c_infrequentboom/c_infrequentboom.mdl"
 			"attach_to_hands" "1"
 			"used_by_classes"
 			{
@@ -7683,6 +7701,11 @@ Ammo drains much faster"
 			}
 			"attributes"
 			{
+				"fire rate bonus"
+				{
+					"attribute_class" "mult_postfiredelay"
+					"value" "0.6"
+				}
 				"damage bonus bullet vs sentry target"
 				{
 					"attribute_class" "mult_dmg_bullet_vs_sentry_target"
@@ -7714,6 +7737,46 @@ Ammo drains much faster"
 					"value" "100"
 				}
 				"hidden separator" "1"
+				"energy weapon no ammo"
+				{
+					"attribute_class" "energy_weapon_no_ammo"
+					"value" "1"
+				}
+				"energy weapon charged shot"
+				{
+					"attribute_class" "energy_weapon_charged_shot"
+					"value" "1"
+				}
+				"energy weapon penetration"
+				{
+					"attribute_class" "energy_weapon_penetration"
+					"value" "1"
+				}
+				"energy weapon no hurt building"
+				{
+					"attribute_class" "energy_weapon_no_hurt_building"
+					"value" "1"
+				}
+				"energy weapon no deflect"
+				{
+					"attribute_class" "energy_weapon_no_deflect"
+					"value" "1"
+				}
+				"damage bonus"
+				{
+					"attribute_class" "mult_dmg"
+					"value" "3"
+				}
+				"weapon spread bonus"
+				{
+					"attribute_class" 	"mult_spread_scale"
+					"value" 			"0.1"
+				}
+				"bullets per shot penalty"
+				{
+					"attribute_class" 	"mult_bullets_per_shot"
+					"value" "0.2"
+				}
 				"maxammo metal increased"
 				{
 					"attribute_class" "mult_maxammo_metal"
@@ -7728,17 +7791,23 @@ Ammo drains much faster"
 				"animation_replacement"
 				{
 					"ACT_VM_PRIMARYATTACK" "ACT_VM_PRIMARYATTACK_SPECIAL"
-					"ACT_PRIMARY_VM_INSPECT_START" "ACT_PRIMARY_ALT1_VM_INSPECT_START"
-					"ACT_PRIMARY_VM_INSPECT_IDLE" "ACT_PRIMARY_ALT1_VM_INSPECT_IDLE"
-					"ACT_PRIMARY_VM_INSPECT_END" "ACT_PRIMARY_ALT1_VM_INSPECT_END"
 				}
-				"attached_models_festive"
-				{
-					"0"
-					{
-						"model" "models/workshop_partner/weapons/c_models/c_dex_shotgun/c_dex_shotgun_festivizer.mdl"
-					}
-				}
+			}
+			"visuals_red"
+			{
+				"skin"		"0"
+				"sound_single_shot"		"Weapon_Capper.Single"
+				"sound_burst"		"Weapon_Capper.SingleCrit"
+				"muzzle_flash"		"muzzle_raygun_red"
+				"tracer_effect"		"bullet_tracer_raygun"
+			}
+			"visuals_blu"
+			{
+				"skin"		"1"
+				"sound_single_shot"		"Weapon_Capper.Single"
+				"sound_burst"		"Weapon_Capper.SingleCrit"
+				"muzzle_flash"		"muzzle_raygun_blue"
+				"tracer_effect"		"bullet_tracer_raygun"
 			}
 			"mouse_pressed_sound" "ui/item_heavy_gun_pickup.wav"
 			"drop_sound" "ui/item_heavy_gun_drop.wav"
@@ -11275,7 +11344,7 @@ Killing a different class resets your fire rate"
 			"item_type_name" "#TF_Weapon_Shotgun"
 			"item_name" "Broken Steel"
 			"item_description" "Considerably more damage
-			
+
 Less accurate, slower firing rate"
 			"item_logname" "panic_attack"
 			"item_iconname" "panic_attack"
@@ -11310,17 +11379,17 @@ Less accurate, slower firing rate"
 				"damage bonus"
 				{
 					"attribute_class" 	"mult_dmg"
-					"value" 			"1.25"
+					"value" 			"1.3"
 				}
 				"weapon spread bonus"
 				{
 					"attribute_class" 	"mult_spread_scale"
-					"value" 			"1.25"
+					"value" 			"1.2"
 				}
 				"fire rate penalty"
 				{
 					"attribute_class" "mult_postfiredelay"
-					"value" "1.25"
+					"value" "1.2"
 				}
 			}
 			"mouse_pressed_sound" "ui/item_heavy_gun_pickup.wav"
@@ -11422,7 +11491,7 @@ Less accurate, slower firing rate"
 			"item_type_name" "#TF_Weapon_Shotgun"
 			"item_name" "Dug-Out Duster"
 			"item_description" "More accurate, larger clipsize
-			
+
 Longer deploy time, longer reload time"
 			"item_logname" "panic_attack"
 			"item_iconname" "panic_attack"
@@ -11477,6 +11546,54 @@ Longer deploy time, longer reload time"
 			}
 			"mouse_pressed_sound" "ui/item_heavy_gun_pickup.wav"
 			"drop_sound" "ui/item_heavy_gun_drop.wav"
+		}
+		"30666"
+		{
+			"name"		"The C.A.P.P.E.R"
+			"prefab"		"weapon_pistol"
+			"item_name"		"#TF_invasion_pistol"
+			"item_description"		"#TF_invasion_pistol_Desc"
+			"item_logname"		"the_capper"
+			"item_iconname"		"the_capper"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/weapons/c_models/c_invasion_pistol/c_invasion_pistol"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"		"models/workshop/weapons/c_models/c_invasion_pistol/c_invasion_pistol.mdl"
+			"static_attrs"
+			{
+				"weapon_allow_inspect"		"1"
+				"ragdolls become ash"		"1"
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_Capper.Single"
+				"sound_burst"		"Weapon_Capper.SingleCrit"
+				"styles"
+				{
+					"0"
+					{
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+				}
+			}
+			"visuals_red"
+			{
+				"skin"		"0"
+				"sound_single_shot"		"Weapon_Capper.Single"
+				"sound_burst"		"Weapon_Capper.SingleCrit"
+				"muzzle_flash"		"muzzle_raygun_red"
+				"tracer_effect"		"bullet_tracer_raygun"
+			}
+			"visuals_blu"
+			{
+				"skin"		"1"
+				"sound_single_shot"		"Weapon_Capper.Single"
+				"sound_burst"		"Weapon_Capper.SingleCrit"
+				"muzzle_flash"		"muzzle_raygun_blue"
+				"tracer_effect"		"bullet_tracer_raygun"
+			}
 		}
 		"weapon_disciplinary_action"
 		{
